@@ -9,14 +9,6 @@ const CoinBack = () => {
   return <h1 id="tail">Tail.</h1>;
 }
 
-const CoinFlip = (props) => {
-  const isHead = props.isHead;
-  if (isHead) {
-    return <CoinFront />;
-  }
-  return <CoinBack />;
-}
-
 const App = () => {
   const [isHead, setIsHead] = useState(false);
   const flipCoin = () => {
@@ -30,7 +22,6 @@ const App = () => {
   return (
     <div className="center">
       <button id="btn" onClick={flipCoin}>Flip the coin</button>
-      <CoinFlip isHead={isHead} />
     </div>
   );
 };
